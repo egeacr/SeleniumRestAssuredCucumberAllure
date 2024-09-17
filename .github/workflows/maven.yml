@@ -13,6 +13,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 12,18,23 * * *' # Run every day at 12:00, 18:00, and 23:59  
 
 jobs:
   build:
