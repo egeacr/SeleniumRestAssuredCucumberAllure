@@ -20,7 +20,7 @@ import java.time.Instant;
         },
         features = "src/test/resources/features",
         dryRun = false,
-        tags = "@ui and @api"
+        tags = "@regression"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
