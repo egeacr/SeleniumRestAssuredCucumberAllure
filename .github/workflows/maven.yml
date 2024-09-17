@@ -43,18 +43,16 @@ jobs:
         ref: gh-pages
         path: gh-pages
 
-    - name: Build test report
-      uses: simple-elf/allure-report-action@v1.7
-      if: always()
-      with:
-        gh_pages: gh-pages
-        allure_history: allure-history
-        allure_results: build/allure-results
+    - name: Generate Allure Report
+      run: |
+          npm install -g allure-commandline
+          allure generate allure-results -o allure-report --clean
 
-    - name: Publish test report
+   ## Deploy step      
+    - name: Deploy Allure Report to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: always()
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages
-        publish_dir: allure-history
+            github_token: ${{ secrets.GITHUB_TOKEN }} 
+            publish_dir: ./allure-report
+            publish_branch: allure-report
+            keep_files: false
