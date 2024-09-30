@@ -1,6 +1,6 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
 "0","","0","Book Store Search Box Tests","2","0","User can search existing books and see the results","1"
 "0","","0","Brand Endpoint Tests","1","0","Brand Search Test","0"
-"0","","0","Brand Endpoint Tests","1","0","Brand Update Test","0"
 "0","","1","Book Store Search Box Tests","2","0","User can search non-existing books","0"
+"0","","0","Brand Endpoint Tests","1","0","Brand Update Test","0"
 "0","","0","Brand Endpoint Tests","1","0","Brand Create Test","0"
